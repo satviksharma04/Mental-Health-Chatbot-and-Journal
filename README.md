@@ -1,38 +1,59 @@
-# 🧠 Mental Health ChatBot + Journal 💬
+# 🧠 Mental Health Chatbot & Journal
 
-A full-stack web application that allows users to maintain a personal journal and interact with an empathetic AI chatbot designed to promote emotional well-being and self-care.
+A web-based mental wellness companion built using the **MERN stack**, combining a chatbot for emotional support and a personal journal for daily mood tracking.
+
+> 🔗 **Live Demo**: [https://mental-health-chatbot-and-journal.netlify.app](https://mental-health-chatbot-and-journal.netlify.app)
 
 ---
 
-## ✨ Features
+## 💡 Project Overview
 
-- 📝 **Personal Journal**  
-  Create, view, and manage your journal entries in a clean and intuitive interface.
+This platform is designed to help users improve their mental well-being by:
+- Chatting anonymously with an AI-powered emotional support bot
+- Recording their daily moods and thoughts in a private journal
+- Viewing visual insights (like mood charts) for self-reflection
 
-- 💬 **Mental Health ChatBot**  
-  Friendly AI chatbot powered by Gemini API to provide emotional support and motivation.
+---
+
+## 🚀 Features
+
+- 🤖 **AI Chatbot**  
+  Chat with an empathetic AI bot built to provide basic mental health support and motivation.
+
+- 📓 **Mood Journal**  
+  Add daily mood entries with dates, select emotions, and write notes.
+
+- 📊 **Mood Analytics**  
+  Pie chart showing mood trends over time to visualize emotional patterns.
+
+- 📅 **Date Picker**  
+  Easy selection of specific days to add/view journal entries.
 
 - 🔐 **Authentication**  
-  Login/logout functionality to keep your data private and secure.
+  Simple login/logout system to protect user entries and sessions.
 
-- 📊 **Mood Tracker**  
-  Extendable section to add mood tracking and visualization over time.
+- 🧠 **Dynamic Quotes**  
+  Mood-based motivational quotes fetched from RapidAPI.
 
 ---
 
 ## 🛠️ Tech Stack
 
-**Frontend:**
-- React.js  
-- Tailwind CSS  
-- Axios  
-- React Modal
+### Frontend
+- React.js
+- Tailwind CSS
+- Axios
+- Chart.js
+- React Router
 
-**Backend:**
-- Node.js  
-- Express.js  
-- MongoDB  
-- dotenv  
-- Google Generative AI (Gemini API)
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- bcrypt, JWT for authentication
 
 ---
+
+
+
+
