@@ -2,6 +2,7 @@
 
 A full-stack web application that allows users to maintain a personal journal and interact with an empathetic AI chatbot designed to promote emotional well-being and self-care.
 
+---
 
 ## ✨ Features
 
