@@ -17,14 +17,13 @@ const AuthProvider = ({ children }) => {
       const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/profile`, {
         withCredentials: true
       });
-      console.log('Auth check response:', res.data);
+
       if (res.data.success) {
         setUserId(res.data.userId);
       } else {
         setUserId(null);
       }
     } catch (error) {
-      console.error('Auth check error:', error);
       setUserId(null);
     } finally {
       setLoading(false);

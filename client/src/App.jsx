@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import Modal from 'react-modal';
@@ -26,7 +26,7 @@ const App = () => {
         <Route path='/journal' element={<ProtectedRoute><Journal /></ProtectedRoute>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/chatbot' element={<ProtectedRoute><ChatBot /></ProtectedRoute>} />
-        <Route path='/mood-tracker' element={<ProtectedRoute><MoodTracker /></ProtectedRoute>} />
+        <Route path='/moodtracker' element={<ProtectedRoute><MoodTracker /></ProtectedRoute>} />
         <Route path='/helpline' element={<Helpline/>} />
       </Routes>
     </div>

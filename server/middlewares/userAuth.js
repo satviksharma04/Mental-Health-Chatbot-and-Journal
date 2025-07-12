@@ -9,9 +9,6 @@ const userAuth = async (req, res, next) => {
         token = req.cookies.token;
     }
 
-    console.log('Auth middleware - token found:', !!token); // Debug log
-    console.log('Auth middleware - cookies:', req.cookies); // Debug log
-
     if (!token) {
         return res.json({ success: false, message: "Not Authorized. Login Again" });
     }
@@ -19,10 +16,8 @@ const userAuth = async (req, res, next) => {
     try {
         const tokenDecode = jwt.verify(token, process.env.JWT_SECRET);
         req.userId = tokenDecode.id;
-        console.log('Auth middleware - token verified for user:', req.userId); // Debug log
         next();
     } catch (error) {
-        console.error('Auth middleware - token verification failed:', error); // Debug log
         return res.json({ success: false, message: error.message });
     }
 };

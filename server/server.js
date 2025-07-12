@@ -11,8 +11,6 @@ import chatbotRouter from "./routes/chatbotRoute.js";
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-console.log('Current NODE_ENV:', process.env.NODE_ENV); // Debug log
-
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
@@ -25,10 +23,20 @@ app.use(cors({
 
 await connectDB();
 
-
 app.use('/api/user', userRouter);
 app.use("/api/journal", journalRouter);
 app.use('/api/chatbot', chatbotRouter);
+
+// Environment check endpoint (remove this after debugging)
+app.get('/api/env-check', (req, res) => {
+  res.json({
+    nodeEnv: process.env.NODE_ENV || 'not set',
+    hasJwtSecret: !!process.env.JWT_SECRET,
+    hasMongoUri: !!process.env.MONGODB_URI,
+    port: process.env.PORT || 3000
+  });
+});
+
 app.get('/', (req, res) => res.send("API working "));
 
 app.listen(PORT, () => {

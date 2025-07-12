@@ -41,7 +41,7 @@ const Navbar = () => {
               ChatBot
               <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full'></span>
             </a>
-            <a href='/mood-tracker' className='text-white hover:text-gray-200 font-medium transition-colors duration-300 relative group'>
+            <a href='/moodtracker' className='text-white hover:text-gray-200 font-medium transition-colors duration-300 relative group'>
               Mood Tracker
               <span className='absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full'></span>
             </a>
@@ -106,7 +106,7 @@ const Navbar = () => {
             <a href='/chatbot' className='block px-7 py-2 text-white hover:bg-white/10 rounded-md transition-colors duration-300' onClick={closeMenu}>
               ChatBot
             </a>
-            <a href='/mood-tracker' className='block px-7 py-2 text-white hover:bg-white/10 rounded-md transition-colors duration-300' onClick={closeMenu}>
+            <a href='/moodtracker' className='block px-7 py-2 text-white hover:bg-white/10 rounded-md transition-colors duration-300' onClick={closeMenu}>
               Mood Tracker
             </a>
             <a href='/journal' className='block px-7 py-2 text-white hover:bg-white/10 rounded-md transition-colors duration-300' onClick={closeMenu}>

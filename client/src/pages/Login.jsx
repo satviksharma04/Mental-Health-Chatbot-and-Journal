@@ -31,8 +31,6 @@ const Login = () => {
           password,
         }, { withCredentials: true });
 
-        console.log('Login response:', res.data);
-
         if (res.data.success) {
           setUserId(res.data.userId);
           toast.success('Logged in!');
@@ -43,7 +41,6 @@ const Login = () => {
           toast.error(res.data.message);
         }
       } catch (err) {
-        console.error('Login error:', err);
         toast.error('Login failed!');
       }
     } else {
@@ -55,12 +52,8 @@ const Login = () => {
         }, { withCredentials: true });
 
         if (res.data.success) {
+          setUserId(res.data.userId);
           toast.success('Account created!');
-          try {
-            await checkAuth();
-          } catch (e) {
-            console.error('Auth check failed after signup:', e);
-          }
           setShowLogin(false);
           navigate('/');
           return;
