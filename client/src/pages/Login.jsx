@@ -26,7 +26,7 @@ const Login = () => {
   const submitHandler = async () => {
     if (state === 'Login') {
       try {
-        const res = await axios.post('http://localhost:4000/api/user/login', {
+        const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/login`, {
           email,
           password,
         }, { withCredentials: true });
@@ -45,7 +45,7 @@ const Login = () => {
       }
     } else {
       try {
-        const res = await axios.post('http://localhost:4000/api/user/register', {
+        const res = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/user/register`, {
           name,
           email,
           password,
