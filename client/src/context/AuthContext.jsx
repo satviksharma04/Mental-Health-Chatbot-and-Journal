@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
   };
 
   const logout = async () => {
-    await axios.get('http://localhost:4000/api/user/logout', {
+    await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/logout`, {
       withCredentials: true
     });
     toast.success('Logged out successfully!');
