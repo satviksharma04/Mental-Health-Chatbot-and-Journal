@@ -9,6 +9,7 @@ userRouter.post('/login', loginUser);
 userRouter.get('/logout', logoutUser);
 
 userRouter.get('/profile', userAuth, (req, res) => {
+  console.log('Profile request for user:', req.userId);
   res.json({
     success: true,
     message: 'You are logged in',

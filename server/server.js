@@ -11,6 +11,8 @@ import chatbotRouter from "./routes/chatbotRoute.js";
 const PORT = process.env.PORT || 3000;
 const app = express();
 
+console.log('Current NODE_ENV:', process.env.NODE_ENV); // Debug log
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
