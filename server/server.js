@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
   origin: [
-    "http://localhost:5173",
     "https://mental-health-chatbot-and-journal.netlify.app"
   ], 
   credentials: true                
