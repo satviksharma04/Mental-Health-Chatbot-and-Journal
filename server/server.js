@@ -16,7 +16,9 @@ app.use(cookieParser());
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "https://mental-health-chatbot-and-journal.netlify.app"
+    "https://mental-health-chatbot-and-journal.netlify.app",
+    "https://mental-health-chatbot-and-journal.netlify.app/",
+    "https://mental-health-chatbot-and-journal.netlify.app/*"
   ], 
   credentials: true                
 }));
@@ -27,15 +29,6 @@ app.use('/api/user', userRouter);
 app.use("/api/journal", journalRouter);
 app.use('/api/chatbot', chatbotRouter);
 
-// Environment check endpoint (remove this after debugging)
-app.get('/api/env-check', (req, res) => {
-  res.json({
-    nodeEnv: process.env.NODE_ENV || 'not set',
-    hasJwtSecret: !!process.env.JWT_SECRET,
-    hasMongoUri: !!process.env.MONGODB_URI,
-    port: process.env.PORT || 3000
-  });
-});
 
 app.get('/', (req, res) => res.send("API working "));
 
