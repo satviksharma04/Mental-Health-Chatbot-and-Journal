@@ -14,7 +14,7 @@ const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const res = await axios.get('http://localhost:4000/api/user/profile', {
+      const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/user/profile`, {
         withCredentials: true
       });
       if (res.data.success) {
